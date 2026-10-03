@@ -119,3 +119,71 @@ h1,h2{font-family:var(--serif);font-weight:500;margin:0;line-height:1.05}
 .nv-foot{text-align:center;padding:26px 20px;font-size:13px;color:var(--mist);background:var(--night)}
 
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-delay:0s!important;transition:none!important}}
+
+/* ---------- Page Créez votre décor ---------- */
+.cz-page{background:var(--teal)}
+.cz{background:linear-gradient(180deg,var(--night) 0,var(--teal) 900px)}
+.cz{padding-top:calc(76px + env(safe-area-inset-top,0px))}
+.cz-head{padding:20px 0 18px}
+.cz-head h1{font-size:clamp(46px,11vw,80px);color:#fff}
+.cz-grid{display:grid;gap:10px;padding-bottom:60px}
+.cz-stage{position:sticky;top:calc(58px + env(safe-area-inset-top,0px));z-index:5;background:linear-gradient(180deg,var(--night) 85%,rgba(19,37,41,0));padding:8px 0 14px;margin:0 -20px;padding-inline:20px}
+.cz-table-wrap{position:relative;width:min(100%,38vh,560px);aspect-ratio:1;margin-inline:auto}
+.cz-table{width:100%;height:100%;overflow:visible}
+.cz-table *{transition:fill .6s ease,stroke .6s ease}
+.cz-bloom{transform-box:fill-box;transform-origin:center;animation:czBloom .8s cubic-bezier(.3,1.35,.5,1) both}
+@keyframes czBloom{from{transform:scale(.2) rotate(-25deg);opacity:0}to{transform:none;opacity:1}}
+.cz-glow{opacity:0;transition:opacity .6s}
+.cz-flame{opacity:0;transform-box:fill-box;transform-origin:center}
+.is-lit .cz-glow{opacity:.6}
+.is-lit .cz-flame{opacity:1;animation:nvFlick 1.8s ease-in-out infinite alternate}
+.cz-quick{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:8px}
+.cz-light{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--gold);background:transparent;color:var(--gold-l);font:500 14px var(--sans);cursor:pointer}
+.cz-light[aria-pressed="true"]{background:var(--gold);color:#1a2a2d}
+.cz-quick .nv-step button{width:40px;height:40px}
+.cz-quick .nv-step output{font-size:28px}
+.cz-panel{display:grid;gap:8px}
+.cz-block{padding:20px 0;border-top:1px solid rgba(255,255,255,.1)}
+.cz-block h2{font-size:28px;color:#fff;margin-bottom:14px}
+.cz-presets{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.cz-preset{display:grid;gap:6px;padding:0;border:0;background:none;color:var(--ivory);font:400 13px/1.25 var(--sans);text-align:center;cursor:pointer}
+.cz-preset img,.cz-preset svg{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:999px 999px 10px 10px;border:2px solid transparent;background:#F6E1E3}
+.cz-preset[aria-pressed="true"] img,.cz-preset[aria-pressed="true"] svg{border-color:var(--gold)}
+.cz-preset[aria-pressed="true"] span{color:var(--gold-l)}
+.cz-swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:12px 8px}
+.cz-sw{display:grid;justify-items:center;gap:6px;padding:0;border:0;background:none;color:var(--mist);font:400 12px/1.2 var(--sans);text-align:center;cursor:pointer}
+.cz-sw i{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);box-shadow:0 0 0 3px transparent;transition:box-shadow .25s}
+.cz-sw i.cz-ring{background:#fff;border-width:6px;border-style:solid}
+.cz-sw svg{width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.06);box-shadow:0 0 0 3px transparent;transition:box-shadow .25s}
+.cz-sw[aria-pressed="true"]{color:#fff}
+.cz-sw[aria-pressed="true"] i,.cz-sw[aria-pressed="true"] svg{box-shadow:0 0 0 3px var(--gold)}
+.cz-chips{display:flex;flex-wrap:wrap;gap:8px}
+.cz-chip{min-height:42px;padding:0 16px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.04);color:var(--ivory);font:400 14px var(--sans);cursor:pointer}
+.cz-chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#1a2a2d}
+.cz-summary ul{list-style:none;padding:0;margin:0 0 22px}
+.cz-summary li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.12);font-size:15px}
+.cz-summary li span{color:var(--mist)}
+.cz-summary li b{font-weight:400;color:#fff;text-align:right}
+.cz-reset{margin-top:16px;background:none;border:0;color:var(--mist);text-decoration:underline;font:400 14px var(--sans);cursor:pointer;padding:8px 0}
+.nv-foot a{color:var(--gold-l)}
+@media (min-width:900px){
+  .cz-grid{grid-template-columns:1.15fr .85fr;gap:60px;align-items:start}
+  .cz-stage{top:90px;margin:0;padding:0;background:none}
+  .cz-table-wrap{width:min(100%,62vh,540px)}
+  .cz-swatches{grid-template-columns:repeat(4,1fr)}
+}
+
+/* Pastille « Créez votre décor » sur l'accueil */
+.nv-decor-pill{position:fixed;right:14px;bottom:calc(var(--demo-h,34px) + 12px);z-index:91;display:flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none}
+.nv-decor-pill .nv-dp-ico{width:66px;height:66px;border-radius:50%;background:#FBEFF1;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.35);animation:nvDp 3s ease-in-out infinite}
+.nv-decor-pill svg{width:58px;height:44px}
+.nv-decor-pill b{font:500 12px/1 var(--sans);color:#1a2a2d;background:var(--gold);padding:6px 10px;border-radius:999px;white-space:nowrap}
+@keyframes nvDp{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-4px) rotate(-4deg)}}
+
+/* Section d'appel vers le configurateur */
+.nv-teaser{background:linear-gradient(180deg,var(--night),var(--teal));text-align:center}
+.nv-teaser svg{width:min(320px,80%);height:auto;margin:0 auto 10px;display:block}
+.nv-teaser .nv-lead{margin-inline:auto}
+.nv-teaser-btn{display:inline-flex;margin-top:26px;min-height:52px;align-items:center;padding:0 28px;border-radius:999px;background:var(--gold);color:#1a2a2d;text-decoration:none;font-weight:500}
+.nv-teaser-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:22px}
+.nv-teaser-chips span{font-size:13px;padding:7px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.18);color:var(--mist)}

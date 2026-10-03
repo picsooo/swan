@@ -8,6 +8,18 @@
     document.body.style.overflow=open?'hidden':'';
   });}
 
+  // Carrousel des grandes cartes
+  document.querySelectorAll('[data-rail]').forEach(function(rail){
+    var nav=rail.nextElementSibling,dots=nav&&nav.querySelector('.sw-dots'),cards=rail.children;
+    if(dots)for(var i=0;i<cards.length;i++)dots.appendChild(document.createElement('i'));
+    function step(){return cards[1]?cards[1].offsetLeft-cards[0].offsetLeft:rail.clientWidth;}
+    function upd(){if(!dots)return;var idx=Math.round(rail.scrollLeft/step());
+      var maxI=Math.max(0,Math.round((rail.scrollWidth-rail.clientWidth)/step()));
+      Array.prototype.forEach.call(dots.children,function(d,k){d.classList.toggle('is-on',k===Math.min(idx,maxI)||(idx>=maxI&&k>=maxI&&k===cards.length-1));});}
+    rail.addEventListener('scroll',function(){window.requestAnimationFrame(upd)},{passive:true});upd();
+    if(nav)nav.querySelectorAll('.sw-rail-btn').forEach(function(b){b.addEventListener('click',function(){rail.scrollBy({left:step()*(+b.dataset.dir),behavior:'smooth'});});});
+  });
+
   // Formulaires factices
   document.querySelectorAll('form[data-fake]').forEach(function(f){
     f.addEventListener('submit',function(e){

@@ -184,3 +184,25 @@ p{margin:0 0 1em}
 
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 .sw-split > div > .sw-btn{margin-top:22px}
+
+/* Grandes cartes prestations (une par écran sur mobile) */
+.sw-cards{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -20px;padding:30px 20px 10px;scrollbar-width:none;overscroll-behavior-x:contain}
+.sw-cards::-webkit-scrollbar{display:none}
+.sw-card{position:relative;flex:0 0 calc(100% - 28px);scroll-snap-align:center;background:var(--tint,#fff);border-radius:30px;padding:14px 14px 26px;display:flex;flex-direction:column}
+.sw-card-ph{display:block;border-radius:999px 999px 18px 18px;overflow:hidden;aspect-ratio:4/5;background:#fff}
+.sw-card-ph img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.sw-card:hover .sw-card-ph img{transform:scale(1.04)}
+.sw-card-top{position:relative}
+.sw-sprig{position:absolute;width:250px;height:182px;left:50%;transform:translateX(-50%);bottom:-92px;pointer-events:none;filter:drop-shadow(0 6px 10px rgba(60,30,40,.15))}
+.sw-card-txt{padding:80px 8px 0;text-align:center}
+.sw-card-txt h3{font-size:38px}
+.sw-card-txt p{color:var(--muted);margin:10px auto 20px;max-width:24em}
+.sw-rail-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:22px}
+.sw-rail-btn{width:46px;height:46px;border-radius:50%;border:1px solid var(--teal-deep);background:transparent;color:var(--teal-deep);font-size:24px;line-height:1;cursor:pointer}
+.sw-dots{display:flex;gap:8px}
+.sw-dots i{width:8px;height:8px;border-radius:50%;background:var(--line);transition:background .3s,width .3s}
+.sw-dots i.is-on{background:var(--gold);width:22px;border-radius:5px}
+@media (min-width:900px){
+  .sw-cards{margin:0;padding:30px 0 10px}
+  .sw-card{flex-basis:calc((100% - 32px)/3)}
+}

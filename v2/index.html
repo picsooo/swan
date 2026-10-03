@@ -34,39 +34,17 @@
     <p class="nv-motto">Grace &amp; Loyalty</p>
     <p class="nv-hint">Passez le doigt sur l'écran pour éclairer la salle</p>
   </div>
-  <a class="nv-down" href="#composer">Composer ma table</a>
+  <a class="nv-down" href="composer.html">Créer votre décor</a>
 </section>
 
-<!-- CONFIGURATEUR DE TABLE -->
-<section class="nv-sec nv-compose" id="composer">
+<!-- APPEL VERS LE CONFIGURATEUR -->
+<section class="nv-sec nv-teaser" id="decor">
   <div class="nv-wrap">
-    <h2>Composez votre table</h2>
-    <p class="nv-lead">Choisissez une ambiance, le nombre de convives, puis allumez les bougies. Chaque univers est tiré d'un événement réel signé Swan Events.</p>
-
-    <div class="nv-themes" role="tablist" aria-label="Ambiances">
-      <button role="tab" aria-selected="true" data-t="blanc"><i style="background:linear-gradient(135deg,#F7F2EC 50%,#C9A266 50%)"></i>Blanc &amp; or</button>
-      <button role="tab" aria-selected="false" data-t="poudre"><i style="background:linear-gradient(135deg,#D9DEEE 50%,#F07C98 50%)"></i>Rose poudré</button>
-      <button role="tab" aria-selected="false" data-t="med"><i style="background:linear-gradient(135deg,#2E4FA3 50%,#F2C230 50%)"></i>Méditerranée</button>
-      <button role="tab" aria-selected="false" data-t="regence"><i style="background:linear-gradient(135deg,#C9A0A0 50%,#C9A44E 50%)"></i>Régence</button>
-    </div>
-
-    <div class="nv-stage">
-      <div class="nv-table-wrap">
-        <svg class="nv-table" id="nvTable" viewBox="-200 -200 400 400" role="img" aria-label="Vue du dessus d'une table ronde dressée"></svg>
-        <div class="nv-petals" id="nvPetals" aria-hidden="true"></div>
-      </div>
-      <div class="nv-side">
-        <div class="nv-ctrl">
-          <span>Convives</span>
-          <div class="nv-step"><button id="nvMinus" aria-label="Un convive de moins">−</button><output id="nvCount">10</output><button id="nvPlus" aria-label="Un convive de plus">+</button></div>
-        </div>
-        <button class="nv-candle-btn" id="nvCandles" aria-pressed="false">Allumer les bougies</button>
-        <figure class="nv-ref">
-          <div class="nv-ref-ph"><img id="nvRefImg" src="../img/mariage-table.webp" alt=""></div>
-          <figcaption><small>Inspiré de</small><span id="nvRefTxt">Un mariage de rêve, janvier 2025</span></figcaption>
-        </figure>
-      </div>
-    </div>
+    <svg data-sprig="#F2A7B8,#E23A55,#FBE3E6,#F7C6CF,#B985E0" aria-hidden="true"></svg>
+    <h2>Créez votre décor</h2>
+    <p class="nv-lead">Nappe, roses, hortensias, chaises, bougies : composez votre table et envoyez-la à Swan Events.</p>
+    <div class="nv-teaser-chips"><span>8 palettes de fleurs</span><span>8 nappes</span><span>4 centres de table</span><span>6 ambiances signées</span></div>
+    <a class="nv-teaser-btn" href="composer.html">Créer mon décor</a>
   </div>
 </section>
 
@@ -115,8 +93,6 @@
         <label>Téléphone<input required name="tel" type="tel" autocomplete="tel"></label>
         <label>Événement<select name="type"><option>Mariage</option><option>Fiançailles</option><option>Événement d'entreprise</option><option>Inauguration</option><option>Soirée à thème</option></select></label>
         <label>Date envisagée<input name="date" type="date"></label>
-        <input type="hidden" name="ambiance" id="nvAmb" value="Blanc & or">
-        <p class="nv-amb">Ambiance choisie : <span id="nvAmbTxt">Blanc &amp; or, 10 convives</span></p>
         <button type="submit">Être rappelé</button>
       </form>
       <div class="nv-ok" role="status">Demande envoyée, Swan Events vous rappelle. (Démonstration : rien n'a été enregistré.)</div>
@@ -127,6 +103,7 @@
 </section>
 
 <a class="wm-switch" href="../index.html"><span class="wm-switch-dot"></span><span class="wm-switch-txt">Découvrir la version classique</span></a>
+<a class="nv-decor-pill" href="composer.html" aria-label="Créez votre décor"><span class="nv-dp-ico"><svg data-sprig="#F2A7B8,#E23A55,#FBE3E6,#F7C6CF,#B985E0" aria-hidden="true"></svg></span><b>Créez votre décor</b></a>
 <div class="wm-demo">Maquette de démonstration réalisée par Webminds · aucun formulaire n'est enregistré</div>
-<script src="v2.js"></script><script src="../js/demo.js"></script>
+<script src="../js/flora.js"></script><script src="v2.js"></script><script src="../js/demo.js"></script>
 </body></html>
