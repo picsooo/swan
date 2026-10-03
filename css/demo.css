@@ -1,0 +1,13 @@
+:root{--demo-h:34px}
+body{padding-bottom:var(--demo-h)}
+/* Demo banner + switch pill */
+.wm-demo{box-sizing:border-box;position:fixed;left:0;right:0;bottom:0;height:var(--demo-h);z-index:90;background:#121c1e;color:#d9e2e0;font:400 11.5px/var(--demo-h) var(--sans, Arial),Arial,sans-serif;text-align:center;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 10px}
+.wm-switch{position:fixed;left:14px;bottom:calc(var(--demo-h) + 14px);z-index:91;display:flex;align-items:center;gap:10px;padding:10px 16px 10px 10px;border-radius:999px;background:var(--gold,#B8945A);color:#fff;text-decoration:none;font:500 13.5px/1.2 "Jost",Arial,sans-serif;box-shadow:0 10px 26px rgba(28,50,54,.28);animation:wmPulse 2.6s ease-in-out infinite}
+.wm-switch-dot{width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.22);display:grid;place-items:center}
+.wm-switch-dot::after{content:"";width:8px;height:8px;border-radius:50%;background:#fff}
+@keyframes wmPulse{0%,100%{box-shadow:0 10px 26px rgba(28,50,54,.28),0 0 0 0 rgba(184,148,90,.55)}50%{box-shadow:0 10px 26px rgba(28,50,54,.28),0 0 0 10px rgba(184,148,90,0)}}
+
+@media (max-width:600px){:root{--demo-h:40px}.wm-demo{white-space:normal;line-height:1.3;font-size:11px;display:flex;align-items:center;justify-content:center;padding:3px 14px}}
+.wm-switch-txt{max-width:260px;overflow:hidden;white-space:nowrap;transition:max-width .35s ease,opacity .25s}
+.wm-switch.is-mini{padding-right:10px;gap:0}
+.wm-switch.is-mini .wm-switch-txt{max-width:0;opacity:0}

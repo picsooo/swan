@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Swan Events · Composez votre réception</title>
+<meta name="description" content="Swan Events, event planner à Bir Khadem (Alger). Composez votre table et découvrez nos univers.">
+<link rel="icon" href="../img/swan-mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="v2.css">
+<link rel="stylesheet" href="../css/demo.css">
+</head><body>
+
+<header class="nv-top">
+  <a class="nv-brand" href="#accueil"><img src="../img/swan-mark.svg" alt=""><span>SWAN EVENTS</span></a>
+  <a class="nv-call" href="tel:+213799220388">Appeler</a>
+</header>
+
+<!-- HERO : la lumière des bougies révèle la salle -->
+<section class="nv-hero" id="accueil" aria-label="Accueil">
+  <div class="nv-hero-photo" style="background-image:url(../img/mariage-table.webp)"></div>
+  <div class="nv-hero-veil" aria-hidden="true"></div>
+  <div class="nv-hero-in">
+    <svg class="nv-swan" viewBox="30 70 320 380" fill="none" stroke-linecap="round" aria-hidden="true">
+      <defs><linearGradient id="ng" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EAD2A0"/><stop offset=".55" stop-color="#C9A266"/><stop offset="1" stop-color="#A27A45"/></linearGradient></defs>
+      <g stroke="url(#ng)">
+        <path pathLength="1" style="--d:1.15s" stroke-width="3" d="M258 90 C 278 100, 292 122, 286 158"/>
+        <path pathLength="1" style="--d:.1s" stroke-width="4.5" d="M258 90 C 230 84, 168 92, 146 140 C 130 180, 156 216, 214 248 C 272 280, 330 312, 326 370 C 322 404, 296 428, 258 436"/>
+        <path pathLength="1" style="--d:.6s" stroke-width="2.6" d="M48 172 C 110 200, 190 240, 252 286 C 270 300, 282 316, 288 336"/>
+        <path pathLength="1" style="--d:.8s" stroke-width="2.2" d="M48 172 C 76 222, 104 272, 126 314 L 120 324"/>
+        <path pathLength="1" style="--d:1s" stroke-width="2.8" d="M56 338 C 88 372, 150 398, 214 400 C 260 402, 300 394, 324 378"/>
+      </g>
+    </svg>
+    <h1 class="nv-title">Swan Events</h1>
+    <p class="nv-motto">Grace &amp; Loyalty</p>
+    <p class="nv-hint">Passez le doigt sur l'écran pour éclairer la salle</p>
+  </div>
+  <a class="nv-down" href="#composer">Composer ma table</a>
+</section>
+
+<!-- CONFIGURATEUR DE TABLE -->
+<section class="nv-sec nv-compose" id="composer">
+  <div class="nv-wrap">
+    <h2>Composez votre table</h2>
+    <p class="nv-lead">Choisissez une ambiance, le nombre de convives, puis allumez les bougies. Chaque univers est tiré d'un événement réel signé Swan Events.</p>
+
+    <div class="nv-themes" role="tablist" aria-label="Ambiances">
+      <button role="tab" aria-selected="true" data-t="blanc"><i style="background:linear-gradient(135deg,#F7F2EC 50%,#C9A266 50%)"></i>Blanc &amp; or</button>
+      <button role="tab" aria-selected="false" data-t="poudre"><i style="background:linear-gradient(135deg,#D9DEEE 50%,#F07C98 50%)"></i>Rose poudré</button>
+      <button role="tab" aria-selected="false" data-t="med"><i style="background:linear-gradient(135deg,#2E4FA3 50%,#F2C230 50%)"></i>Méditerranée</button>
+      <button role="tab" aria-selected="false" data-t="regence"><i style="background:linear-gradient(135deg,#C9A0A0 50%,#C9A44E 50%)"></i>Régence</button>
+    </div>
+
+    <div class="nv-stage">
+      <div class="nv-table-wrap">
+        <svg class="nv-table" id="nvTable" viewBox="-200 -200 400 400" role="img" aria-label="Vue du dessus d'une table ronde dressée"></svg>
+        <div class="nv-petals" id="nvPetals" aria-hidden="true"></div>
+      </div>
+      <div class="nv-side">
+        <div class="nv-ctrl">
+          <span>Convives</span>
+          <div class="nv-step"><button id="nvMinus" aria-label="Un convive de moins">−</button><output id="nvCount">10</output><button id="nvPlus" aria-label="Un convive de plus">+</button></div>
+        </div>
+        <button class="nv-candle-btn" id="nvCandles" aria-pressed="false">Allumer les bougies</button>
+        <figure class="nv-ref">
+          <div class="nv-ref-ph"><img id="nvRefImg" src="../img/mariage-table.webp" alt=""></div>
+          <figcaption><small>Inspiré de</small><span id="nvRefTxt">Un mariage de rêve, janvier 2025</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UNIVERS -->
+<section class="nv-sec nv-univ" id="univers">
+  <div class="nv-wrap"><h2>Nos univers</h2><p class="nv-lead">Mariages, fiançailles, inaugurations, anniversaires de marque : faites défiler.</p></div>
+  <div class="nv-rail" tabindex="0" aria-label="Galerie des réalisations">
+    <figure><img src="../img/mariage-table.webp" alt="" loading="lazy"><figcaption>Mariage<span>Arches blanches et roses poudrées</span></figcaption></figure>
+    <figure><img src="../img/fiancailles-jardin.webp" alt="" loading="lazy"><figcaption>Fiançailles<span>Réception au jardin</span></figcaption></figure>
+    <figure><img src="../img/anniversaire-maneva.webp" alt="" loading="lazy"><figcaption>Les 5 ans de Maneva<span>Événement d'entreprise</span></figcaption></figure>
+    <figure><img src="../img/table-regence.webp" alt="" loading="lazy"><figcaption>Bal d'inspiration Régence<span>Soirée à thème</span></figcaption></figure>
+    <figure><img src="../img/inauguration-flowersoul.webp" alt="" loading="lazy"><figcaption>Inauguration Flower Soul<span>Ouverture de boutique</span></figcaption></figure>
+    <figure><img src="../img/corporate-dentina.webp" alt="" loading="lazy"><figcaption>Dentina<span>Arche aux couleurs de la marque</span></figcaption></figure>
+    <figure><img src="../img/buffet-jardin.webp" alt="" loading="lazy"><figcaption>Sweet table<span>Buffet en extérieur</span></figcaption></figure>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="nv-sec nv-serv">
+  <div class="nv-wrap">
+    <h2>De l'idée au jour J</h2>
+    <ul class="nv-servlist">
+      <li><b>Mariages</b><span>Scénographie, arches, table d'honneur, art de la table</span></li>
+      <li><b>Fiançailles</b><span>En salle ou au jardin, fleuries jusqu'au moindre détail</span></li>
+      <li><b>Buffets &amp; sweet tables</b><span>Pièces de macarons, mignardises, mise en scène</span></li>
+      <li><b>Entreprises</b><span>Anniversaires de marque, lancements, journées clients</span></li>
+      <li><b>Inaugurations</b><span>Façade, accueil et compositions florales</span></li>
+      <li><b>Soirées à thème</b><span>Bals et anniversaires inspirés d'une époque</span></li>
+    </ul>
+    <div class="nv-ig"><b>74,9K</b><span>personnes suivent nos décors sur Instagram</span><a href="https://www.instagram.com/swan__events/" target="_blank" rel="noopener">@swan__events</a></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="nv-sec nv-contact" id="contact">
+  <div class="nv-wrap nv-cgrid">
+    <div>
+      <h2>Réservez votre date</h2>
+      <p class="nv-lead">Laissez votre numéro, l'équipe vous rappelle pour un rendez-vous à Bir Khadem.</p>
+      <p class="nv-tel"><a href="tel:+213799220388">07 99 22 03 88</a></p>
+      <p class="nv-addr">Bir Khadem, Alger</p>
+    </div>
+    <div>
+      <form class="nv-form" data-fake>
+        <label>Nom et prénom<input required name="nom" autocomplete="name"></label>
+        <label>Téléphone<input required name="tel" type="tel" autocomplete="tel"></label>
+        <label>Événement<select name="type"><option>Mariage</option><option>Fiançailles</option><option>Événement d'entreprise</option><option>Inauguration</option><option>Soirée à thème</option></select></label>
+        <label>Date envisagée<input name="date" type="date"></label>
+        <input type="hidden" name="ambiance" id="nvAmb" value="Blanc & or">
+        <p class="nv-amb">Ambiance choisie : <span id="nvAmbTxt">Blanc &amp; or, 10 convives</span></p>
+        <button type="submit">Être rappelé</button>
+      </form>
+      <div class="nv-ok" role="status">Demande envoyée, Swan Events vous rappelle. (Démonstration : rien n'a été enregistré.)</div>
+    </div>
+  </div>
+  <iframe class="nv-map" title="Swan Events sur Google Maps" src="https://www.google.com/maps?q=Swan%20Events%20Bir%20Khadem%20Alger&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <footer class="nv-foot">© Swan Events · Event planner, Bir Khadem, Alger</footer>
+</section>
+
+<a class="wm-switch" href="../index.html"><span class="wm-switch-dot"></span><span class="wm-switch-txt">Découvrir la version classique</span></a>
+<div class="wm-demo">Maquette de démonstration réalisée par Webminds · aucun formulaire n'est enregistré</div>
+<script src="v2.js"></script><script src="../js/demo.js"></script>
+</body></html>
